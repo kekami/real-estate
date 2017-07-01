@@ -1,0 +1,405 @@
+:root {
+  box-sizing: border-box;
+  font-size: calc(0.7em + 0.8vw); 
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #eee;
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+}
+
+@media (min-width: 60em) {
+  .container {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+
+button {
+  margin: 0.5em;
+  padding: 1em 2em;
+  border-radius: 2em;
+  border: none;
+  background-color: #F7CD6D;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  z-index: 25;
+  color: #ffffff;
+  transition: all 0.5s ease;
+
+  &__logo {
+    margin: 0 1em;
+  }
+  &__logo-colored {
+    color: #F7CD6D;
+  }
+  
+  &__hamburger {
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background: transparent;
+  }
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  background-color: #2F3137;;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 3em;
+  
+  a {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+    &:hover, .offcanvas a:focus{
+      color: #f1f1f1;
+    }
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.6em;
+    z-index: 50;
+  }
+}
+
+@media (min-width: 35em) {
+  .navbar {
+    justify-content: space-between;
+    &__hamburger {
+      display: block;
+    }
+  }
+}
+
+/* Slideshow container */
+.slideshow {
+  position: relative;
+  color: #ffffff;
+
+  &__buttons {
+    margin-top: 2em;
+  }
+  
+  &__mySlides {
+    display: none;
+    text-align: center;
+
+    h1,
+    h2 {
+      margin: 0.5em;
+    }
+
+    h2 {
+      font-weight: 300;
+    }
+
+    .container {
+      align-items: center;
+      height: 30em;
+    }
+
+    &--image-1 {
+      background-image: url('../img/background1.jpg');
+      background-color: rgba(0,0,0,0.5);
+      background-size: cover;
+      background-position: 70%;
+      background-blend-mode: multiply;
+    }
+
+    &--image-2 {
+      background-image: url('../img/background2.jpg');
+      background-color: rgba(0,0,0,0.5);
+      background-size: cover;
+      background-position: 70%;
+      background-blend-mode: multiply;
+    }
+  }
+}
+
+@media (min-width: 35em) {
+  .slideshow {
+    &__buttons {
+      display: flex;
+    }
+  }
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  text-align: center;
+  padding: 1em;
+  
+  &__item {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+}
+
+.active, .dots__item:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+.services {
+  padding: 0.5em;
+  background-color: #2F3137;
+  color: #ffffff;
+
+  &__item {
+    padding: 1em;
+    transition: all 0.5s ease;
+  }
+
+  &__item:hover {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+@media (min-width: 35em) {
+  .services {
+    .container {
+      flex-direction: row;
+    }
+  }
+}
+
+.offers {
+  .grid {
+    max-width: 100%;
+  }
+
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  &__sizer,
+  &__item {
+    width: 100%;
+  }
+
+  &__item {
+    height: auto;
+    float: left;
+    
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+
+    &--info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #F7CD6D;
+      z-index: 50;
+      opacity: 0;
+      color: #ffffff;
+      transition: all 0.5s ease;
+      padding: 1em;
+      text-align: center;
+
+      p {
+        font-size: 0.9rem;
+      }
+      button {
+        background-color: #333;
+      }
+    }
+
+    &:hover &--info {
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 35em) {
+  .offers {
+    &__sizer,
+    &__item {
+      width: 33%;
+    }
+    &__item {
+        &--info {
+          h2 {
+            margin: 0;
+          }
+        }
+    }
+  }
+}
+
+// @media (min-width: 60em) {
+//   .offers {
+//     &__sizer,
+//     &__item {
+//       width: 25%;
+//     }
+//   }
+// }
+
+.about {
+  img {
+    width: 100%;
+    margin: 0.5em;
+  }
+
+  hr {
+    width: 100%;
+    margin: 1em 0 2em 0;
+  }
+}
+
+@media (min-width: 35em) {
+  .about {
+    &__container {
+      display: flex;
+    }
+
+    &__item {
+      margin: 1em;
+    }
+  }
+}
+
+.jumbotron {
+  color: #ffffff;
+
+  .container {
+    min-height: 25em;
+  }
+
+  h3 {
+    font-weight: 300;
+  }
+
+  &--image1 {
+    background-image: url('../img/jumbotron1.jpg');
+    background-size: cover;
+    background-position: 50%;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+  }
+}
+
+.content {
+  padding: 0.5em;
+  background-size: cover;
+  background-color: #2F3137;;
+  color: #ffffff;
+}
+
+@media (min-width: 35em) {
+  .content {
+    .container {
+      flex-direction: row;
+    }
+
+    &__item {
+      margin: 1em;
+    }
+  }
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}
+
+footer {
+  padding: 1em;
+  background-color: #2F3137;
+  color: #ffffff;
+}
+
+@media (min-width: 35em) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

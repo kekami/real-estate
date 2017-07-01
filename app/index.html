@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Real Estate - Kevin Kamimura</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <!--endbuild-->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header>
+      <div class="navbar">
+        <div class="navbar__logo">
+          <h3>real<span class="navbar__logo-colored">estate</span></h3>
+        </div>
+
+        <button onclick="openNav()" class="navbar__hamburger">&#9776;</button>
+      </div>
+      
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Pages</a>
+        <a href="#">Blog</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <section class="slideshow">
+        <div class="slideshow__mySlides slideshow__mySlides--image-1 fade">
+          <div class="container">
+            <h1>Buying or renting a property is a serious affair.</h1>
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta, eaque quos doloremque veritatis impedit.</h3>
+            <div class="slideshow__buttons">
+              <button>Learn More</button>
+              <button>Registration</button>
+            </div>
+
+            <div class="dots">
+              <span class="dots__item" onclick="currentSlide(1)"></span> 
+              <span class="dots__item" onclick="currentSlide(2)"></span> 
+            </div>
+          </div>
+        </div>
+        
+        <div class="slideshow__mySlides slideshow__mySlides--image-2 fade">
+          <div class="container">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta, eaque quos doloremque veritatis impedit.</h2>
+            <div class="slideshow__buttons">
+              <button>Learn More</button>
+              <button>Registration</button>
+            </div>
+            
+            <div class="dots">
+              <span class="dots__item" onclick="currentSlide(1)"></span> 
+              <span class="dots__item" onclick="currentSlide(2)"></span> 
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+
+    <section class="services">
+      <div class="container">
+        <section class="services__item">
+          <h2>Mortages</h2>
+          <hr>
+          <img src="" alt="">
+          <p>Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta.</p>
+          <button>More</button>
+        </section>
+        <section class="services__item">
+          <h2>Rentals</h2>
+          <hr>
+          <img src="" alt="">
+          <p>Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta.</p>
+          <button>More</button>
+        </section>
+        <section class="services__item">
+          <h2>Office spaces</h2>
+          <hr>
+          <img src="" alt="">
+          <p>Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta.</p>
+          <button>More</button>
+        </section>
+        <section class="services__item">
+          <h2>Loans</h2>
+          <hr>
+          <img src="" alt="">
+          <p>Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta</p>
+          <button>More</button>
+        </section>
+      </div>
+    </section>
+
+    <section class="offers">
+      <div class="grid">
+        <div class="offers__sizer"></div>
+        <div class="offers__item">
+          <img src="img/offer1.jpg" alt="">
+          <div class="offers__item--info">
+            <h2>Find a home</h2>
+            <p>We can show you any home anytime that is convenient to you.</p>
+            <button>More</button>
+          </div>
+        </div>
+        <div class="offers__item">
+          <img src="img/offer2.jpg" alt="">
+          <div class="offers__item--info">
+            <h2>Find a home</h2>
+            <p>We can show you any home anytime that is convenient to you.</p>
+            <button>More</button>
+          </div>
+        </div>
+        <div class="offers__item">
+          <img src="img/offer3.jpg" alt="">
+          <div class="offers__item--info">
+            <h2>Find a home</h2>
+            <p>We can show you any home anytime that is convenient to you.</p>
+            <button>More</button>
+          </div>
+        </div>
+        <div class="offers__item">
+          <img src="img/offer4.jpg" alt="">
+          <div class="offers__item--info">
+            <h2>Find a home</h2>
+            <p>We can show you any home anytime that is convenient to you.</p>
+            <button>More</button>
+          </div>
+        </div>
+        <div class="offers__item">
+          <img src="img/offer5.jpg" alt="">
+          <div class="offers__item--info">
+            <h2>Find a home</h2>
+            <p>We can show you any home anytime that is convenient to you.</p>
+            <button>More</button>
+          </div>
+        </div>
+        <div class="offers__item">
+          <img src="img/offer6.jpg" alt="">
+          <div class="offers__item--info">
+            <h2>Find a home</h2>
+            <p>We can show you any home anytime that is convenient to you.</p>
+            <button>More</button>
+          </div>
+        </div>
+        <div class="offers__item">
+          <img src="img/offer7.jpg" alt="">
+          <div class="offers__item--info">
+            <h2>Find a home</h2>
+            <p>We can show you any home anytime that is convenient to you.</p>
+            <button>More</button>
+          </div>
+        </div>
+        <div class="offers__item">
+          <img src="img/offer8.jpg" alt="">
+          <div class="offers__item--info">
+            <h2>Find a home</h2>
+            <p>We can show you any home anytime that is convenient to you.</p>
+            <button>More</button>
+          </div>
+        </div>
+        <div class="offers__item">
+          <img src="img/offer9.jpg" alt="">
+          <div class="offers__item--info">
+            <h2>Find a home</h2>
+            <p>We can show you any home anytime that is convenient to you.</p>
+            <button>More</button>
+          </div>
+        </div>
+        <div class="offers__item">
+          <img src="img/offer10.jpg" alt="">
+          <div class="offers__item--info">
+            <h2>Find a home</h2>
+            <p>We can show you any home anytime that is convenient to you.</p>
+            <button>More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <h2>Welcome</h2>
+        <hr>
+        <div class="about__container">
+          <div class="about__item">
+            <img src="img/about1.jpg" alt="">
+            <h3>Our company is the one stop solution for all needs</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta, eaque quos doloremque veritatis impedit.</p>
+            <button>More</button>
+          </div>
+          <div class="about__item">
+          <img src="img/about2.jpg" alt="">
+          <h3>Thanks for visiting our website!</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta, eaque quos doloremque veritatis impedit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="jumbotron jumbotron--image1">
+      <div class="container">
+        <h2>Individual approach. Proven expertise.</h2>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta, eaque quos doloremque veritatis impedit.</h3>
+        <button>Learn More</button>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        <div class="content__item">
+          <h2>Leadership</h2>
+          <hr>
+          <img src="" alt="">
+          <h3>We are the leaders</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta, eaque quos doloremque veritatis impedit.</p>
+          <button>More</button>
+        </div>
+
+        <div class="content__item">
+          <h2>Professionalism</h2>
+          <hr>
+          <img src="" alt="">
+          <h3>Find an agent</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta, eaque quos doloremque veritatis impedit.</p>
+          <button>More</button>
+        </div>
+
+        <div class="content__item">
+          <h2>Home buying tips</h2>
+          <hr>
+          <img src="" alt="">
+          <h3>Your future home tips</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iste quisquam vero molestiae, ex fuga assumenda tempore quam, rem vitae, amet dolore esse laborum soluta, eaque quos doloremque veritatis impedit.</p>
+          <button>More</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="map"></section>
+
+    <footer>
+      <div>
+        <h4>Archives</h4>
+        <hr>
+        <ul>
+          <li><a href="#">December, 2016</a></li>
+          <li><a href="#">January, 2017</a></li>
+          <li><a href="#">February, 2017</a></li>
+          <li><a href="#">March, 2017</a></li>
+          <li><a href="#">April, 2017</a></li>
+          <li><a href="#">May, 2017</a></li>
+          <li><a href="#">June, 2017</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Locations</h4>
+        <hr>
+        <p>Hötorget 2, 111 57 Stockholm</p>
+        <p>Kammakargatan 62, 111 24 Stockholm</p>
+        <p>Luntmakargatan 73, 113 51 Stockholm</p>
+      </div>
+
+      <div>
+        <h4>Contacts</h4>
+        <hr>
+        <h5>Call us</h5>
+        <h5>+46 81234567</h5>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!--build:js js/main.min.js -->
+    <script src="js/script.js"></script>
+    <!-- endbuild -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3vhvMA4-Ke2A5BIWtusGOIxNLguKWyo0&callback=initMap"></script>
+  </body>
+</html>
